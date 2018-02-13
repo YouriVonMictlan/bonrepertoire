@@ -1,0 +1,149 @@
+/* CSS Document */
+/*on fait un reset pour éliminer les espacements intrinseques produits par certaines balises*/
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+/*permet de retirer les bordures mises en automatique par le
+navigateur lors d'un clic*/
+a,input, textarea{
+	outline:none;
+	text-decoration:none;
+	color:#000;	
+}
+
+body{
+	font-family:arial,sans-serif;
+	font-size:0.63em;/*permet de ramener la taille par défaut de la police à 10px : en gros 1em=10px*/
+	display:flex;
+	overflow:hidden;
+}
+.nav_centre{
+	text-align:right;
+	margin:0 0 30px;
+	font-size:1.1em;
+}
+
+/***GAUCHE*****************************************/
+#gauche{
+	width:20%;
+	min-height:100vh;
+	background:#4a87c3;
+	padding:10px 10px 30px;
+	font-size:1.5em;
+}
+
+#gauche ul{
+	list-style-type:none;
+}
+
+#menu_back a{
+	display:block;
+	padding:8px 15px;
+	background:#e3e3e3;
+	margin:5px;
+	border-radius:4px;
+}
+
+#menu_back a:hover{
+	background:#c3c3c3;
+}
+
+/***CENTRE*****************************************/
+#centre{
+	width:0;
+}
+
+#centre:target{
+	width:20%;
+	background:#bfe3d9;	
+	padding:10px 10px 30px;
+	font-size:1.5em;
+	transition:1s all ease;
+}
+
+/***DROITE*****************************************/
+#droite{
+	flex:1;/*permet d'occuper la place restante en largeur*/
+	background:#fff;
+	overflow:auto;
+	font-size:1.5em;
+	padding:20px 10%;
+	text-align:center;
+}
+
+.tab_resultat{
+	width:100%;
+	margin:20px 0;
+	border:1px solid gray;
+	text-align:left;
+	border-collapse:collapse;/*permet de fusionner les bordures*/
+}
+
+.tab_resultat td{
+	border:1px solid gray;
+	padding:8px 15px;
+}
+
+.tab_resultat th{
+	padding:8px 15px;
+	border:1px solid gray;
+	text-align:left;
+}
+
+.tab_resultat tr td:last-child,.tab_resultat tr th:last-child{
+	text-align:center;
+}
+
+.bt{
+	text-align:center;
+	margin:20px 0;
+}
+
+.bt a{
+	background:#4a87c3;
+	padding:8px 15px;
+	color:#fff;
+	border-radius:4px;
+}
+
+.bt a:hover{
+	background:#000;
+}
+
+/*===============================*/
+#formulaire{
+	width:100%;
+	margin:30px auto;
+}
+
+#formulaire input{
+	width:100%;
+	display:block;
+	padding:5px 15px;
+	border-radius:4px;
+	border:1px solid #d2d2d2;
+	margin:10px 0;
+	font-family:inherit;
+	font-size:inherit;	
+}
+
+/*permet de ne s'adresser qu'au bouton*/
+#formulaire input[type=submit]{
+	background:#fb5b1a;
+	width:auto;
+	margin:25px auto 0;
+	color:#fff;
+	font-weight:bold;
+	padding:10px 30px;
+}
+
+#formulaire input[type=submit]:hover{
+	background:#30549d;
+}
+
+#formulaire input[type=submit]:active{
+	box-shadow:2px 2px 5px #000 inset;		
+}
+

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Back Office du site</title>
+<!--charset=utf-8 permet de gérer les caractères accuentués-->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />   
+<link href="../css/back.css" rel="stylesheet" type="text/css" />
+<link href="../css/dashicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<aside id="gauche">
+	<div class="nav_centre">
+		<a href="#centre">+</a>
+	</div>
+	<nav id="menu_back">
+		<ul>
+			<li>
+				<a href="../index.php">Retour au site</a>
+			</li>
+			<li>
+				<a href="index.php?action=inserer_compte">Liste des comptes</a>
+			</li>			
+			<li>
+				<a href="index.php?action=afficher_contact">Liste des contacts</a>
+			</li>
+		</ul>
+	</nav>
+</aside>
+<aside id="centre">
+	<div class="nav_centre">
+		<a href="index.php">x</a>
+	</div>
+</aside>
+<section id="droite">
+	<h1>
+	<?php if(isset($titre)){echo $titre;} ?>
+	</h1>
+	<?php if(isset($avertissement)){echo $avertissement;} ?>
+	<?php if(isset($formulaire)){include($formulaire);} ?>	
+	<?php if(isset($tab_resultat)){echo $tab_resultat;} ?>
+</section>
+
+</body>
+</html>

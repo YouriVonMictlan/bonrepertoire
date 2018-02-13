@@ -1,0 +1,7 @@
+<form id="formulaire" action="index.php?action=<?php if(isset($action_form)){echo $action_form;} ?>" method="POST">
+	<input required placeholder="Nom..." type="text" name="nom_compte" value="<?php if(isset($_POST['nom_compte'])){echo $_POST['nom_compte'];} ?>"  />
+	<input required placeholder="Prénom..." type="text" name="prenom_compte" value="<?php if(isset($_POST['prenom_compte'])){echo $_POST['prenom_compte'];} ?>"  />
+	<input required placeholder="Email..." type="email" name="email_compte" value="<?php if(isset($_POST['email_compte'])){echo $_POST['email_compte'];} ?>" />
+	<input required placeholder="Mot de passe" type="password" name="pass_compte" value="<?php if(isset($_POST['pass_compte'])){echo $_POST['pass_compte'];} ?>" />
+	<input type="submit" name="submit" value="<?php if(isset($bouton)){echo $bouton;} ?>" />
+</form>
